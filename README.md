@@ -80,4 +80,14 @@ cameo/
 ├── build.gradle
 └── CMakeLists.txt (root)
 ```
+## 🛠️ Build & Run Guide
+
+### 🔧 Prerequisites
+
+- Android Studio with:
+  - NDK installed
+  - CMake installed
+- OpenCV Android SDK: [Download here](https://opencv.org/releases/)
+
+---
 
