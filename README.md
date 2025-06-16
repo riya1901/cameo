@@ -90,4 +90,92 @@ cameo/
 - OpenCV Android SDK: [Download here](https://opencv.org/releases/)
 
 ---
+## 🌐 Push to GitHub – Step-by-Step Guide
+
+Use these steps to push your Android project to GitHub using the command line:
+
+---
+
+### 🧱 Step 1: Initialize Git
+
+```bash
+git init
+```
+
+---
+
+### 🔗 Step 2: Add Remote Repository
+
+```bash
+git remote add origin https://github.com/your-username/cameo.git
+```
+
+⚠️ Replace `your-username` with your actual GitHub username.
+
+---
+
+### 📦 Step 3: Add All Project Files
+
+```bash
+git add .
+```
+
+---
+
+### 📝 Step 4: Commit Your Changes
+
+```bash
+git commit -m "Initial commit"
+```
+
+---
+
+### 🔄 Step 5: Pull README or Existing Files (if needed)
+
+```bash
+git pull origin main --allow-unrelated-histories
+```
+
+---
+
+### ☁️ Step 6: Push Code to GitHub
+
+```bash
+git push origin main
+```
+
+---
+
+## ⚠️ Common Errors and Fixes
+
+### ❌ Error: Updates were rejected because the tip of your current branch is behind
+
+✅ Run:
+
+```bash
+git pull origin main --allow-unrelated-histories
+```
+
+### ❌ Error: RPC failed; curl 22 The requested URL returned error: 408
+
+✅ Solution:
+
+```bash
+git config http.postBuffer 524288000
+```
+
+### ❌ Warning: File too large (e.g., .so files > 50MB)
+
+✅ Solution: Use Git Large File Storage (LFS)
+
+```bash
+git lfs install
+git lfs track "*.so"
+git add .gitattributes
+git add path/to/your/largefile.so
+git commit -m "Track large files with Git LFS"
+git push origin main
+```
+
+👉 Install Git LFS from: [https://git-lfs.github.com](https://git-lfs.github.com)
 
